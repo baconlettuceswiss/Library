@@ -21,9 +21,12 @@
 
                 'entered password = DB PW
                 If Password = txtPW.Text Then
-                    MessageBox.Show("Login successful")
+                    'MessageBox.Show("Login successful")
 
-                    'Me.Hide()
+                    Dim WelcomeForm As WelcomePage
+                    WelcomeForm = New WelcomePage
+                    WelcomeForm.Show()
+                    Me.Visible = False
                     'txtbox PW != DB PW
                 Else
                     MessageBox.Show("Login unsuccessful")
@@ -47,9 +50,12 @@
                         Password = RowData.Password
 
                         If Password = txtPW.Text Then
-                            MessageBox.Show("Login successful")
+                            'MessageBox.Show("Login successful")
 
-                            'Me.Hide()
+                            Dim WelcomeForm As WelcomePage
+                            WelcomeForm = New WelcomePage
+                            WelcomeForm.Show()
+                            Me.Visible = False
                         Else
                             MessageBox.Show("Login unsuccessful")
                             txtPW.Clear()
