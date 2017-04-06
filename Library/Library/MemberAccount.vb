@@ -1,6 +1,5 @@
 ﻿Public Class MemberAccount
     Private Sub MemberAccount_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label1.Text = Login.memberID
 
         'TODO: This line of code loads data into the 'LibraryDataSet.Resources' table. You can move, or remove it, as needed.
         Me.ResourcesTableAdapter.Fill(Me.LibraryDataSet.Resources)
@@ -19,8 +18,6 @@
 
         'Results.Rows.Clear()
         NumberOfRows = CheckoutTableAdapter.FillByMemberCheckout(LibraryDataSet.Checkout, MemberID)
-
-        Label1.Text = NumberOfRows
 
         If NumberOfRows > 0 Then
 
