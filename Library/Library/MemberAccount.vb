@@ -76,16 +76,6 @@
                 dgvCell.Value = RowData.Subject1
                 dgvRow.Cells.Add(dgvCell)
 
-                'add publication date to the 3rd  column of the DataGridView
-                'dgvCell = New DataGridViewTextBoxCell()
-                'dgvCell.Value = RowData.PublicationDate
-                'dgvRow.Cells.Add(dgvCell)
-
-                'add series to the 4th column of the DataGridView
-                'dgvCell = New DataGridViewTextBoxCell()
-                'dgvCell.Value = RowData.Series
-                'dgvRow.Cells.Add(dgvCell)
-
                 'add checkout data to the 5th column of the DataGridView
                 dgvCell = New DataGridViewTextBoxCell()
                 dgvCell.Value = CheckoutDate.Date
@@ -113,52 +103,6 @@
         Me.TableAdapterManager.UpdateAll(Me.LibraryDataSet)
     End Sub
 
-    Private Sub Results_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Results.CellContentClick
-        If e.RowIndex < 0 Then
-            Exit Sub
-        End If
-
-        Dim NumberOfRows As Integer
-        Dim currentdate As Date = Date.Today.Date
-        Dim grid = DirectCast(sender, DataGridView)
-
-        NumberOfRows = CheckoutTableAdapter.FillByMemberCheckout(LibraryDataSet.Checkout, MemberID)
-
-        If NumberOfRows = 0 Then
-            MessageBox.Show("You have no items checked out at this time.")
-        Else
-
-            If Results.SelectedCells.Count = 0 Then
-                MessageBox.Show("Please select the book you wish to renew")
-            Else
-                If TypeOf grid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
-                    If grid.Columns(e.ColumnIndex).Name = "Renew" Then
-                        'renew book by altering the due date and updating the record selected in ‘the “results” data grid the numbers in parentheses are the index of the ‘data grid column holding the piece of information needed.
-                        resourceID = Results.SelectedCells(1).Value
-
-                        CheckoutTableAdapter.RenewBookUpdateQuery(currentdate, resourceID)
-
-                        CheckoutPeriod = Results.SelectedCells(1).Value
-                        DueDate = DateAdd(DateInterval.Day, CheckoutPeriod, currentdate)
-                        ResourceStatus = "Due " & DueDate.Date
-                        Results.SelectedCells(6).Value = ResourceStatus
-                        Results.SelectedCells(5).Value = currentdate
-
-                        MessageBox.Show("you have successfully renewed your book.", " Book Renewal Successful", MessageBoxButtons.OK)
-
-                    End If
-                End If
-
-                If TypeOf grid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
-                    If grid.Columns(e.ColumnIndex).Name = "ReturnResource" Then
-
-                    End If
-                End If
-
-            End If
-        End If
-    End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btn_Return.Click
         Dim currentdate As Date = Date.Today.Date
         NumberOfRows = CheckoutTableAdapter.FillByMemberCheckout(LibraryDataSet.Checkout, MemberID)
@@ -167,20 +111,15 @@
             MessageBox.Show("You have no items checked out at this time.")
         Else
 
-            If Results.SelectedCells.Count = 0 Then
+            If Results.SelectedRows.Count = 0 Then
                 MessageBox.Show("Please select the book you wish to renew")
             Else
-
                 'return book by altering the due date and updating the record selected in ‘the “results” data grid the numbers in parentheses are the index of the ‘data grid column holding the piece of information needed.
-                resourceID = Results.SelectedCells(1).Value
+                resourceID = Results.SelectedCells(0).Value
 
                 CheckoutTableAdapter.ReturnBookUpdateQuery(currentdate, resourceID)
 
-                'CheckoutPeriod = Results.SelectedCells(1).Value
-                'DueDate = DateAdd(DateInterval.Day, CheckoutPeriod, currentdate)
-                'ResourceStatus = "Due " & DueDate.Date
                 Results.SelectedCells(6).Value = currentdate
-                'Results.SelectedCells(5).Value = currentdate
 
                 MessageBox.Show("you have successfully returned your book.", " Book Return Successful", MessageBoxButtons.OK)
 
@@ -200,12 +139,12 @@
             MessageBox.Show("You have no items checked out at this time.")
         Else
 
-            If Results.SelectedCells.Count = 0 Then
+            If Results.SelectedRows.Count = 0 Then
                 MessageBox.Show("Please select the book you wish to renew")
             Else
 
                 'renew book by altering the due date and updating the record selected in ‘the “results” data grid the numbers in parentheses are the index of the ‘data grid column holding the piece of information needed.
-                resourceID = Results.SelectedCells(1).Value
+                resourceID = Results.SelectedCells(0).Value
 
                 CheckoutTableAdapter.RenewBookUpdateQuery(currentdate, resourceID)
 
@@ -223,5 +162,12 @@
                 Me.Visible = False
             End If
         End If
+    End Sub
+
+    Private Sub btn_back_Click(sender As Object, e As EventArgs) Handles btn_back.Click
+        Dim WelcomeForm As WelcomePage
+        WelcomeForm = New WelcomePage
+        WelcomeForm.Show()
+        Me.Visible = False
     End Sub
 End Class
