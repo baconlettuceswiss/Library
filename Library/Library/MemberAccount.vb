@@ -15,6 +15,7 @@
         Dim Checkoutdate As Date
         Dim MemberID As String = Login.memberID
         Dim RowData As Object
+        Dim Genre As String
 
         'Results.Rows.Clear()
         NumberOfRows = CheckoutTableAdapter.FillByMemberCheckout(LibraryDataSet.Checkout, MemberID)
@@ -50,18 +51,23 @@
 
                 'add author’s last name to the 2nd column of the DataGridView
                 dgvCell = New DataGridViewTextBoxCell()
-                dgvCell.Value = RowData.AuthorLastName
+                dgvCell.Value = RowData.AuthorFirstName & RowData.AuthorLastName
+                dgvRow.Cells.Add(dgvCell)
+
+                'add genre to the 3rd column of the DataGridView
+                dgvCell = New DataGridViewTextBoxCell()
+                dgvCell.Value = RowData.Subject1
                 dgvRow.Cells.Add(dgvCell)
 
                 'add publication date to the 3rd  column of the DataGridView
-                dgvCell = New DataGridViewTextBoxCell()
-                dgvCell.Value = RowData.PublicationDate
-                dgvRow.Cells.Add(dgvCell)
+                'dgvCell = New DataGridViewTextBoxCell()
+                'dgvCell.Value = RowData.PublicationDate
+                'dgvRow.Cells.Add(dgvCell)
 
                 'add series to the 4th column of the DataGridView
-                dgvCell = New DataGridViewTextBoxCell()
-                dgvCell.Value = RowData.Series
-                dgvRow.Cells.Add(dgvCell)
+                'dgvCell = New DataGridViewTextBoxCell()
+                'dgvCell.Value = RowData.Series
+                'dgvRow.Cells.Add(dgvCell)
 
                 'add checkout data to the 5th column of the DataGridView
                 dgvCell = New DataGridViewTextBoxCell()
@@ -74,9 +80,9 @@
                 dgvRow.Cells.Add(dgvCell)
 
                 'add checkout period to the 7th column of the DataGridView
-                dgvCell = New DataGridViewTextBoxCell()
-                dgvCell.Value = RowData.CheckOutPeriod
-                dgvRow.Cells.Add(dgvCell)
+                'dgvCell = New DataGridViewTextBoxCell()
+                'dgvCell.Value = RowData.CheckOutPeriod
+                'dgvRow.Cells.Add(dgvCell)
 
 
                 Results.Rows.Add(dgvRow)
