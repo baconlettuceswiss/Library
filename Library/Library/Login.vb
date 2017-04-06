@@ -1,5 +1,5 @@
 ﻿Public Class Login
-
+    Public Shared memberID As String
     Private Sub BtnLogin_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
 
         Dim NumberOfRows As Integer
@@ -22,6 +22,8 @@
                 'entered password = DB PW
                 If Password = txtPW.Text Then
                     'MessageBox.Show("Login successful")
+
+                    memberID = RowData.MemberID
 
                     Dim WelcomeForm As WelcomePage
                     WelcomeForm = New WelcomePage
@@ -51,6 +53,8 @@
 
                         If Password = txtPW.Text Then
                             'MessageBox.Show("Login successful")
+
+                            memberID = RowData.MemberID
 
                             Dim WelcomeForm As WelcomePage
                             WelcomeForm = New WelcomePage

@@ -11,4 +11,11 @@
         LoginPage.Show()
         Me.Visible = False
     End Sub
+
+    Private Sub btnReview_Click(sender As Object, e As EventArgs) Handles btnReview.Click
+        Dim MemberAccountForm As MemberAccount
+        MemberAccountForm = New MemberAccount
+        MemberAccountForm.Show()
+        Me.Visible = False
+    End Sub
 End Class
