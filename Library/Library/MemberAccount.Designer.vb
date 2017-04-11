@@ -54,12 +54,13 @@ Partial Class MemberAccount
         Me.Results.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.Results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Results.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.BookID, Me.CheckoutLength, Me.Title, Me.Author, Me.Genre, Me.CheckoutDate, Me.ReturnDate, Me.Renew, Me.ReturnResource})
-        Me.Results.Location = New System.Drawing.Point(77, 47)
+        Me.Results.Location = New System.Drawing.Point(39, 37)
+        Me.Results.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Results.Name = "Results"
         Me.Results.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.Results.RowTemplate.Height = 28
         Me.Results.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.Results.Size = New System.Drawing.Size(627, 350)
+        Me.Results.Size = New System.Drawing.Size(418, 227)
         Me.Results.TabIndex = 0
         Me.Results.Visible = False
         '
@@ -81,31 +82,31 @@ Partial Class MemberAccount
         '
         Me.Title.HeaderText = "Title"
         Me.Title.Name = "Title"
-        Me.Title.Width = 74
+        Me.Title.Width = 52
         '
         'Author
         '
         Me.Author.HeaderText = "Author"
         Me.Author.Name = "Author"
-        Me.Author.Width = 93
+        Me.Author.Width = 63
         '
         'Genre
         '
         Me.Genre.HeaderText = "Genre"
         Me.Genre.Name = "Genre"
-        Me.Genre.Width = 90
+        Me.Genre.Width = 61
         '
         'CheckoutDate
         '
         Me.CheckoutDate.HeaderText = "Checkout Date"
         Me.CheckoutDate.Name = "CheckoutDate"
-        Me.CheckoutDate.Width = 152
+        Me.CheckoutDate.Width = 96
         '
         'ReturnDate
         '
         Me.ReturnDate.HeaderText = "Return Date"
         Me.ReturnDate.Name = "ReturnDate"
-        Me.ReturnDate.Width = 133
+        Me.ReturnDate.Width = 83
         '
         'Renew
         '
@@ -129,18 +130,20 @@ Partial Class MemberAccount
         '
         'btn_Return
         '
-        Me.btn_Return.Location = New System.Drawing.Point(807, 185)
+        Me.btn_Return.Location = New System.Drawing.Point(538, 120)
+        Me.btn_Return.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_Return.Name = "btn_Return"
-        Me.btn_Return.Size = New System.Drawing.Size(98, 56)
+        Me.btn_Return.Size = New System.Drawing.Size(65, 36)
         Me.btn_Return.TabIndex = 1
         Me.btn_Return.Text = "Return"
         Me.btn_Return.UseVisualStyleBackColor = True
         '
         'btn_Renew
         '
-        Me.btn_Renew.Location = New System.Drawing.Point(807, 285)
+        Me.btn_Renew.Location = New System.Drawing.Point(538, 185)
+        Me.btn_Renew.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_Renew.Name = "btn_Renew"
-        Me.btn_Renew.Size = New System.Drawing.Size(98, 56)
+        Me.btn_Renew.Size = New System.Drawing.Size(65, 36)
         Me.btn_Renew.TabIndex = 2
         Me.btn_Renew.Text = "Renew"
         Me.btn_Renew.UseVisualStyleBackColor = True
@@ -180,22 +183,24 @@ Partial Class MemberAccount
         '
         'btn_back
         '
-        Me.btn_back.Location = New System.Drawing.Point(807, 81)
+        Me.btn_back.Location = New System.Drawing.Point(538, 53)
+        Me.btn_back.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btn_back.Name = "btn_back"
-        Me.btn_back.Size = New System.Drawing.Size(98, 56)
+        Me.btn_back.Size = New System.Drawing.Size(65, 36)
         Me.btn_back.TabIndex = 3
         Me.btn_back.Text = "Back"
         Me.btn_back.UseVisualStyleBackColor = True
         '
         'MemberAccount
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1026, 773)
+        Me.ClientSize = New System.Drawing.Size(684, 482)
         Me.Controls.Add(Me.btn_back)
         Me.Controls.Add(Me.btn_Renew)
         Me.Controls.Add(Me.btn_Return)
         Me.Controls.Add(Me.Results)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "MemberAccount"
         Me.Text = "MemberAccount"
         CType(Me.Results, System.ComponentModel.ISupportInitialize).EndInit()
