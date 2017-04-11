@@ -76,6 +76,7 @@
                 dgvCell.Value = RowData.Subject1
                 dgvRow.Cells.Add(dgvCell)
 
+
                 'add checkout data to the 5th column of the DataGridView
                 dgvCell = New DataGridViewTextBoxCell()
                 dgvCell.Value = CheckoutDate.Date
@@ -169,5 +170,9 @@
         WelcomeForm = New WelcomePage
         WelcomeForm.Show()
         Me.Visible = False
+    End Sub
+
+    Private Sub Results_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Results.CellContentClick
+
     End Sub
 End Class
