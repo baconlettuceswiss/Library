@@ -171,4 +171,8 @@
         WelcomeForm.Show()
         Me.Visible = False
     End Sub
+
+    Private Sub Results_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Results.CellContentClick
+
+    End Sub
 End Class
