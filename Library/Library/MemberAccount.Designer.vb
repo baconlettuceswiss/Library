@@ -24,15 +24,6 @@ Partial Class MemberAccount
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Results = New System.Windows.Forms.DataGridView()
-        Me.BookID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CheckoutLength = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Title = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Author = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Genre = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.CheckoutDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ReturnDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Renew = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.ReturnResource = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.btn_Return = New System.Windows.Forms.Button()
         Me.btn_Renew = New System.Windows.Forms.Button()
         Me.CheckoutBindingSource = New System.Windows.Forms.BindingSource(Me.components)
@@ -42,6 +33,13 @@ Partial Class MemberAccount
         Me.ResourcesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ResourcesTableAdapter = New Library.LibraryDataSetTableAdapters.ResourcesTableAdapter()
         Me.btn_back = New System.Windows.Forms.Button()
+        Me.BookID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CheckoutLength = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Title = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Author = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Genre = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CheckoutDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ReturnDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.Results, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CheckoutBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,15 +51,75 @@ Partial Class MemberAccount
         Me.Results.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader
         Me.Results.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.Results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Results.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.BookID, Me.CheckoutLength, Me.Title, Me.Author, Me.Genre, Me.CheckoutDate, Me.ReturnDate, Me.Renew, Me.ReturnResource})
+        Me.Results.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.BookID, Me.CheckoutLength, Me.Title, Me.Author, Me.Genre, Me.CheckoutDate, Me.ReturnDate})
         Me.Results.Location = New System.Drawing.Point(77, 47)
         Me.Results.Name = "Results"
         Me.Results.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.Results.RowTemplate.Height = 28
         Me.Results.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.Results.Size = New System.Drawing.Size(627, 350)
+        Me.Results.Size = New System.Drawing.Size(621, 350)
         Me.Results.TabIndex = 0
         Me.Results.Visible = False
+        '
+        'btn_Return
+        '
+        Me.btn_Return.Location = New System.Drawing.Point(753, 203)
+        Me.btn_Return.Name = "btn_Return"
+        Me.btn_Return.Size = New System.Drawing.Size(98, 56)
+        Me.btn_Return.TabIndex = 1
+        Me.btn_Return.Text = "Return"
+        Me.btn_Return.UseVisualStyleBackColor = True
+        '
+        'btn_Renew
+        '
+        Me.btn_Renew.Location = New System.Drawing.Point(753, 303)
+        Me.btn_Renew.Name = "btn_Renew"
+        Me.btn_Renew.Size = New System.Drawing.Size(98, 56)
+        Me.btn_Renew.TabIndex = 2
+        Me.btn_Renew.Text = "Renew"
+        Me.btn_Renew.UseVisualStyleBackColor = True
+        '
+        'CheckoutBindingSource
+        '
+        Me.CheckoutBindingSource.DataMember = "Checkout"
+        Me.CheckoutBindingSource.DataSource = Me.LibraryDataSet
+        '
+        'LibraryDataSet
+        '
+        Me.LibraryDataSet.DataSetName = "LibraryDataSet"
+        Me.LibraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'CheckoutTableAdapter
+        '
+        Me.CheckoutTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CheckoutTableAdapter = Nothing
+        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.EmployeesTableAdapter = Nothing
+        Me.TableAdapterManager.MembersTableAdapter = Nothing
+        Me.TableAdapterManager.ResourcesTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Library.LibraryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
+        'ResourcesBindingSource
+        '
+        Me.ResourcesBindingSource.DataMember = "Resources"
+        Me.ResourcesBindingSource.DataSource = Me.LibraryDataSet
+        '
+        'ResourcesTableAdapter
+        '
+        Me.ResourcesTableAdapter.ClearBeforeFill = True
+        '
+        'btn_back
+        '
+        Me.btn_back.Location = New System.Drawing.Point(753, 99)
+        Me.btn_back.Name = "btn_back"
+        Me.btn_back.Size = New System.Drawing.Size(98, 56)
+        Me.btn_back.TabIndex = 3
+        Me.btn_back.Text = "Back"
+        Me.btn_back.UseVisualStyleBackColor = True
         '
         'BookID
         '
@@ -107,86 +165,6 @@ Partial Class MemberAccount
         Me.ReturnDate.Name = "ReturnDate"
         Me.ReturnDate.Width = 133
         '
-        'Renew
-        '
-        Me.Renew.HeaderText = "Renew"
-        Me.Renew.Name = "Renew"
-        Me.Renew.Text = "Renew"
-        Me.Renew.ToolTipText = "Click to renew resource"
-        Me.Renew.UseColumnTextForButtonValue = True
-        Me.Renew.Visible = False
-        Me.Renew.Width = 65
-        '
-        'ReturnResource
-        '
-        Me.ReturnResource.HeaderText = "Return"
-        Me.ReturnResource.Name = "ReturnResource"
-        Me.ReturnResource.Text = "Return"
-        Me.ReturnResource.ToolTipText = "Click to return resource"
-        Me.ReturnResource.UseColumnTextForButtonValue = True
-        Me.ReturnResource.Visible = False
-        Me.ReturnResource.Width = 64
-        '
-        'btn_Return
-        '
-        Me.btn_Return.Location = New System.Drawing.Point(807, 185)
-        Me.btn_Return.Name = "btn_Return"
-        Me.btn_Return.Size = New System.Drawing.Size(98, 56)
-        Me.btn_Return.TabIndex = 1
-        Me.btn_Return.Text = "Return"
-        Me.btn_Return.UseVisualStyleBackColor = True
-        '
-        'btn_Renew
-        '
-        Me.btn_Renew.Location = New System.Drawing.Point(807, 285)
-        Me.btn_Renew.Name = "btn_Renew"
-        Me.btn_Renew.Size = New System.Drawing.Size(98, 56)
-        Me.btn_Renew.TabIndex = 2
-        Me.btn_Renew.Text = "Renew"
-        Me.btn_Renew.UseVisualStyleBackColor = True
-        '
-        'CheckoutBindingSource
-        '
-        Me.CheckoutBindingSource.DataMember = "Checkout"
-        Me.CheckoutBindingSource.DataSource = Me.LibraryDataSet
-        '
-        'LibraryDataSet
-        '
-        Me.LibraryDataSet.DataSetName = "LibraryDataSet"
-        Me.LibraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'CheckoutTableAdapter
-        '
-        Me.CheckoutTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.CheckoutTableAdapter = Nothing
-        Me.TableAdapterManager.Connection = Nothing
-        Me.TableAdapterManager.EmployeesTableAdapter = Nothing
-        Me.TableAdapterManager.MembersTableAdapter = Nothing
-        Me.TableAdapterManager.ResourcesTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = Library.LibraryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
-        'ResourcesBindingSource
-        '
-        Me.ResourcesBindingSource.DataMember = "Resources"
-        Me.ResourcesBindingSource.DataSource = Me.LibraryDataSet
-        '
-        'ResourcesTableAdapter
-        '
-        Me.ResourcesTableAdapter.ClearBeforeFill = True
-        '
-        'btn_back
-        '
-        Me.btn_back.Location = New System.Drawing.Point(807, 81)
-        Me.btn_back.Name = "btn_back"
-        Me.btn_back.Size = New System.Drawing.Size(98, 56)
-        Me.btn_back.TabIndex = 3
-        Me.btn_back.Text = "Back"
-        Me.btn_back.UseVisualStyleBackColor = True
-        '
         'MemberAccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -228,6 +206,7 @@ Partial Class MemberAccount
     Friend WithEvents ResourcesTableAdapter As LibraryDataSetTableAdapters.ResourcesTableAdapter
     Friend WithEvents btn_Return As Button
     Friend WithEvents btn_Renew As Button
+    Friend WithEvents btn_back As Button
     Friend WithEvents BookID As DataGridViewTextBoxColumn
     Friend WithEvents CheckoutLength As DataGridViewTextBoxColumn
     Friend WithEvents Title As DataGridViewTextBoxColumn
@@ -235,7 +214,4 @@ Partial Class MemberAccount
     Friend WithEvents Genre As DataGridViewTextBoxColumn
     Friend WithEvents CheckoutDate As DataGridViewTextBoxColumn
     Friend WithEvents ReturnDate As DataGridViewTextBoxColumn
-    Friend WithEvents Renew As DataGridViewButtonColumn
-    Friend WithEvents ReturnResource As DataGridViewButtonColumn
-    Friend WithEvents btn_back As Button
 End Class

@@ -76,6 +76,7 @@
                 dgvCell.Value = RowData.Subject1
                 dgvRow.Cells.Add(dgvCell)
 
+
                 'add checkout data to the 5th column of the DataGridView
                 dgvCell = New DataGridViewTextBoxCell()
                 dgvCell.Value = CheckoutDate.Date
