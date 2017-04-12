@@ -78,10 +78,6 @@
     <Compile Include="MemberSearch.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Search.Designer.vb">
-      <DependentUpon>Search.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Search.vb" />
     <Compile Include="LibraryDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -128,9 +124,6 @@
   <ItemGroup>
     <EmbeddedResource Include="MemberSearch.resx">
       <DependentUpon>MemberSearch.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Search.resx">
-      <DependentUpon>Search.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

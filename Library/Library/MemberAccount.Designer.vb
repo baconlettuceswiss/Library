@@ -40,6 +40,8 @@ Partial Class MemberAccount
         Me.Genre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CheckoutDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ReturnDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Renew = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.ReturnResource = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.Results, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CheckoutBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,19 +53,19 @@ Partial Class MemberAccount
         Me.Results.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader
         Me.Results.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.Results.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Results.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.BookID, Me.CheckoutLength, Me.Title, Me.Author, Me.Genre, Me.CheckoutDate, Me.ReturnDate})
+        Me.Results.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.BookID, Me.CheckoutLength, Me.Title, Me.Author, Me.Genre, Me.CheckoutDate, Me.ReturnDate, Me.Renew, Me.ReturnResource})
         Me.Results.Location = New System.Drawing.Point(77, 47)
         Me.Results.Name = "Results"
         Me.Results.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.Results.RowTemplate.Height = 28
         Me.Results.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.Results.Size = New System.Drawing.Size(621, 350)
+        Me.Results.Size = New System.Drawing.Size(737, 350)
         Me.Results.TabIndex = 0
         Me.Results.Visible = False
         '
         'btn_Return
         '
-        Me.btn_Return.Location = New System.Drawing.Point(753, 203)
+        Me.btn_Return.Location = New System.Drawing.Point(862, 205)
         Me.btn_Return.Name = "btn_Return"
         Me.btn_Return.Size = New System.Drawing.Size(98, 56)
         Me.btn_Return.TabIndex = 1
@@ -72,7 +74,7 @@ Partial Class MemberAccount
         '
         'btn_Renew
         '
-        Me.btn_Renew.Location = New System.Drawing.Point(753, 303)
+        Me.btn_Renew.Location = New System.Drawing.Point(862, 305)
         Me.btn_Renew.Name = "btn_Renew"
         Me.btn_Renew.Size = New System.Drawing.Size(98, 56)
         Me.btn_Renew.TabIndex = 2
@@ -114,7 +116,7 @@ Partial Class MemberAccount
         '
         'btn_back
         '
-        Me.btn_back.Location = New System.Drawing.Point(753, 99)
+        Me.btn_back.Location = New System.Drawing.Point(862, 101)
         Me.btn_back.Name = "btn_back"
         Me.btn_back.Size = New System.Drawing.Size(98, 56)
         Me.btn_back.TabIndex = 3
@@ -165,6 +167,20 @@ Partial Class MemberAccount
         Me.ReturnDate.Name = "ReturnDate"
         Me.ReturnDate.Width = 133
         '
+        'Renew
+        '
+        Me.Renew.HeaderText = "Renew"
+        Me.Renew.Name = "Renew"
+        Me.Renew.Text = "Renew"
+        Me.Renew.Width = 65
+        '
+        'ReturnResource
+        '
+        Me.ReturnResource.HeaderText = "Return"
+        Me.ReturnResource.Name = "ReturnResource"
+        Me.ReturnResource.Text = "Return"
+        Me.ReturnResource.Width = 64
+        '
         'MemberAccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
@@ -214,4 +230,6 @@ Partial Class MemberAccount
     Friend WithEvents Genre As DataGridViewTextBoxColumn
     Friend WithEvents CheckoutDate As DataGridViewTextBoxColumn
     Friend WithEvents ReturnDate As DataGridViewTextBoxColumn
+    Friend WithEvents Renew As DataGridViewButtonColumn
+    Friend WithEvents ReturnResource As DataGridViewButtonColumn
 End Class

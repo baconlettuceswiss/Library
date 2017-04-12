@@ -32,50 +32,56 @@ Partial Class MemberSearch
         Me.Genre = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CheckoutPeriod = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Available = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Info = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'AuthorSearch
         '
-        Me.AuthorSearch.Location = New System.Drawing.Point(565, 86)
+        Me.AuthorSearch.Location = New System.Drawing.Point(848, 132)
+        Me.AuthorSearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.AuthorSearch.Name = "AuthorSearch"
-        Me.AuthorSearch.Size = New System.Drawing.Size(75, 23)
+        Me.AuthorSearch.Size = New System.Drawing.Size(112, 35)
         Me.AuthorSearch.TabIndex = 9
         Me.AuthorSearch.Text = "Search"
         Me.AuthorSearch.UseVisualStyleBackColor = True
         '
         'TitleSearch
         '
-        Me.TitleSearch.Location = New System.Drawing.Point(260, 89)
+        Me.TitleSearch.Location = New System.Drawing.Point(390, 137)
+        Me.TitleSearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TitleSearch.Name = "TitleSearch"
-        Me.TitleSearch.Size = New System.Drawing.Size(75, 23)
+        Me.TitleSearch.Size = New System.Drawing.Size(112, 35)
         Me.TitleSearch.TabIndex = 8
         Me.TitleSearch.Text = "Search"
         Me.TitleSearch.UseVisualStyleBackColor = True
         '
         'AuthorTB
         '
-        Me.AuthorTB.Location = New System.Drawing.Point(387, 89)
+        Me.AuthorTB.Location = New System.Drawing.Point(580, 137)
+        Me.AuthorTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.AuthorTB.Name = "AuthorTB"
-        Me.AuthorTB.Size = New System.Drawing.Size(100, 20)
+        Me.AuthorTB.Size = New System.Drawing.Size(148, 26)
         Me.AuthorTB.TabIndex = 7
         Me.AuthorTB.Text = "Author Last Name..."
         '
         'TitleTB
         '
-        Me.TitleTB.Location = New System.Drawing.Point(93, 89)
+        Me.TitleTB.Location = New System.Drawing.Point(140, 137)
+        Me.TitleTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TitleTB.Name = "TitleTB"
-        Me.TitleTB.Size = New System.Drawing.Size(100, 20)
+        Me.TitleTB.Size = New System.Drawing.Size(148, 26)
         Me.TitleTB.TabIndex = 6
         Me.TitleTB.Text = "Book Title..."
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Title, Me.Author, Me.Genre, Me.CheckoutPeriod, Me.Available})
-        Me.DataGridView1.Location = New System.Drawing.Point(93, 155)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Title, Me.Author, Me.Genre, Me.CheckoutPeriod, Me.Available, Me.Info})
+        Me.DataGridView1.Location = New System.Drawing.Point(140, 238)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(547, 274)
+        Me.DataGridView1.Size = New System.Drawing.Size(850, 346)
         Me.DataGridView1.TabIndex = 5
         '
         'Title
@@ -103,16 +109,22 @@ Partial Class MemberSearch
         Me.Available.HeaderText = "Available?"
         Me.Available.Name = "Available"
         '
+        'Info
+        '
+        Me.Info.HeaderText = "More Info"
+        Me.Info.Name = "Info"
+        '
         'MemberSearch
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(732, 514)
+        Me.ClientSize = New System.Drawing.Size(1098, 791)
         Me.Controls.Add(Me.AuthorSearch)
         Me.Controls.Add(Me.TitleSearch)
         Me.Controls.Add(Me.AuthorTB)
         Me.Controls.Add(Me.TitleTB)
         Me.Controls.Add(Me.DataGridView1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "MemberSearch"
         Me.Text = "MemberSearch"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -131,4 +143,5 @@ Partial Class MemberSearch
     Friend WithEvents Genre As DataGridViewTextBoxColumn
     Friend WithEvents CheckoutPeriod As DataGridViewTextBoxColumn
     Friend WithEvents Available As DataGridViewTextBoxColumn
+    Friend WithEvents Info As DataGridViewButtonColumn
 End Class

@@ -10,11 +10,8 @@
     Dim MemberID As String = Login.memberID
     Dim RowData As Object
 
-
-    Private Sub MemberAccount_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        Dim Checkoutdate As Date
-        'Dim Genre As String
+    Private Sub LoadDataGrid()
+        Dim CheckoutDate As Date
 
         'TODO: This line of code loads data into the 'LibraryDataSet.Resources' table. You can move, or remove it, as needed.
         Me.ResourcesTableAdapter.Fill(Me.LibraryDataSet.Resources)
@@ -96,6 +93,13 @@
         End If
 
 
+
+    End Sub
+
+    Private Sub MemberAccount_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadDataGrid()
+
+
     End Sub
 
     Private Sub CheckoutBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
@@ -172,7 +176,41 @@
         Me.Visible = False
     End Sub
 
-    Private Sub Results_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Results.CellContentClick
+    Private Sub Results_CellContentClick(sender As System.Object, e As DataGridViewCellEventArgs) Handles Results.CellContentClick
+        If e.RowIndex < 0 Then
+            Exit Sub
+        End If
 
+        Dim grid = DirectCast(sender, DataGridView)
+        Dim currentdate As Date = Date.Today.Date
+        'currentdate = currentdate.ToShortDateString()
+
+        If TypeOf grid.Columns(e.ColumnIndex) Is DataGridViewButtonColumn Then
+            If grid.Columns(e.ColumnIndex).Name = "Renew" Then
+                resourceID = Results.Rows(e.RowIndex).Cells(0).Value
+
+                CheckoutTableAdapter.RenewBookUpdateQuery(currentdate, resourceID)
+
+                CheckoutPeriod = Results.Rows(e.RowIndex).Cells(1).Value
+                DueDate = DateAdd(DateInterval.Day, CheckoutPeriod, currentdate)
+                ResourceStatus = "Due " & DueDate.Date
+                Results.Rows(e.RowIndex).Cells(6).Value = ResourceStatus
+                Results.Rows(e.RowIndex).Cells(5).Value = currentdate
+
+                MessageBox.Show("you have successfully renewed your book.", " Book Renewal Successful", MessageBoxButtons.OK)
+            End If
+        End If
+
+        If grid.Columns(e.ColumnIndex).Name = "ReturnResource" Then
+            resourceID = Results.Rows(e.RowIndex).Cells(0).Value
+            CheckoutTableAdapter.ReturnBookUpdateQuery(currentdate, resourceID)
+            Results.Rows(e.RowIndex).Cells(6).Value = currentdate
+
+            MessageBox.Show("you have successfully returned your book.", " Book Return Successful", MessageBoxButtons.OK)
+        End If
+
+        Results.Rows.Clear()
+        LoadDataGrid()
     End Sub
+
 End Class
