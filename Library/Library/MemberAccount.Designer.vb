@@ -172,6 +172,7 @@ Partial Class MemberAccount
         Me.Renew.HeaderText = "Renew"
         Me.Renew.Name = "Renew"
         Me.Renew.Text = "Renew"
+        Me.Renew.UseColumnTextForButtonValue = True
         Me.Renew.Width = 65
         '
         'ReturnResource
@@ -179,6 +180,7 @@ Partial Class MemberAccount
         Me.ReturnResource.HeaderText = "Return"
         Me.ReturnResource.Name = "ReturnResource"
         Me.ReturnResource.Text = "Return"
+        Me.ReturnResource.UseColumnTextForButtonValue = True
         Me.ReturnResource.Width = 64
         '
         'MemberAccount
