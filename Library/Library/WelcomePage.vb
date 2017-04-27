@@ -18,4 +18,12 @@
         MemberAccountForm.Show()
         Me.Visible = False
     End Sub
+
+    Private Sub btnAddResource_Click(sender As Object, e As EventArgs) Handles btnAddResource.Click
+        Dim AddResourceForm As AddResource
+        AddResourceForm = New AddResource
+        AddResourceForm.Show()
+        Me.Visible = False
+    End Sub
+
 End Class

@@ -27,7 +27,7 @@
 
                 'ResourcesTableAdapter.RenewBookUpdateQuery(currentdate, resourceID)
 
-                bookInfo = CheckoutTableAdapter.GetDataByMemberCheckout(MemberID)(x)
+                bookInfo = CheckoutTableAdapter.GetDataByMemberCheckout(MemberID)
                 resourceID = bookInfo.resourceID
 
                 'CheckoutPeriod = SearchResults.Rows(e.RowIndex).Cells(1).Value

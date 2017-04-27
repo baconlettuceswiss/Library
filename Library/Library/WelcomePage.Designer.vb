@@ -25,11 +25,12 @@ Partial Class WelcomePage
         Me.btnReview = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.lblWelcome = New System.Windows.Forms.Label()
+        Me.btnAddResource = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnReview
         '
-        Me.btnReview.Location = New System.Drawing.Point(513, 295)
+        Me.btnReview.Location = New System.Drawing.Point(592, 295)
         Me.btnReview.Name = "btnReview"
         Me.btnReview.Size = New System.Drawing.Size(155, 87)
         Me.btnReview.TabIndex = 28
@@ -38,7 +39,7 @@ Partial Class WelcomePage
         '
         'btnLogout
         '
-        Me.btnLogout.Location = New System.Drawing.Point(163, 295)
+        Me.btnLogout.Location = New System.Drawing.Point(63, 295)
         Me.btnLogout.Name = "btnLogout"
         Me.btnLogout.Size = New System.Drawing.Size(155, 87)
         Me.btnLogout.TabIndex = 27
@@ -57,11 +58,21 @@ Partial Class WelcomePage
         Me.lblWelcome.Text = "Welcome"
         Me.lblWelcome.UseMnemonic = False
         '
+        'btnAddResource
+        '
+        Me.btnAddResource.Location = New System.Drawing.Point(320, 295)
+        Me.btnAddResource.Name = "btnAddResource"
+        Me.btnAddResource.Size = New System.Drawing.Size(155, 87)
+        Me.btnAddResource.TabIndex = 29
+        Me.btnAddResource.Text = "Add Resource"
+        Me.btnAddResource.UseVisualStyleBackColor = True
+        '
         'WelcomePage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 494)
+        Me.Controls.Add(Me.btnAddResource)
         Me.Controls.Add(Me.btnReview)
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.lblWelcome)
@@ -75,4 +86,5 @@ Partial Class WelcomePage
     Friend WithEvents btnReview As Button
     Friend WithEvents btnLogout As Button
     Friend WithEvents lblWelcome As Label
+    Friend WithEvents btnAddResource As Button
 End Class

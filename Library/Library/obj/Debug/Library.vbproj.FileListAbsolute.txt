@@ -13,3 +13,4 @@ C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Li
 C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.exe
 C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.xml
 C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.pdb
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.AddResource.resources
