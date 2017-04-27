@@ -1,0 +1,15 @@
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\bin\Debug\Library.accdb
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\bin\Debug\Library.exe.config
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\bin\Debug\Library.exe
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\bin\Debug\Library.pdb
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\bin\Debug\Library.xml
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.vbprojResolveAssemblyReference.cache
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.MemberSearch.resources
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.Login.resources
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.MemberAccount.resources
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.Resources.resources
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.WelcomePage.resources
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.vbproj.GenerateResource.Cache
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.exe
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.xml
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.pdb
