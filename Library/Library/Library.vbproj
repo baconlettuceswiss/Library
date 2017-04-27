@@ -78,6 +78,12 @@
     <Compile Include="AddResource.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EmployeeWelcome.Designer.vb">
+      <DependentUpon>EmployeeWelcome.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeWelcome.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MemberSearch.Designer.vb">
       <DependentUpon>MemberSearch.vb</DependentUpon>
     </Compile>
@@ -130,6 +136,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AddResource.resx">
       <DependentUpon>AddResource.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeWelcome.resx">
+      <DependentUpon>EmployeeWelcome.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MemberSearch.resx">
       <DependentUpon>MemberSearch.vb</DependentUpon>

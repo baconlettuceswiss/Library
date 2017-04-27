@@ -14,3 +14,7 @@ C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Li
 C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.xml
 C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.pdb
 C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.AddResource.resources
+C:\Users\Justin\Source\Repos\Library\Library\Library\bin\Debug\Library.exe.config
+C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.exe
+C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.xml
+C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.pdb
