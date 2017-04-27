@@ -25,23 +25,25 @@ Partial Class WelcomePage
         Me.btnReview = New System.Windows.Forms.Button()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.lblWelcome = New System.Windows.Forms.Label()
-        Me.btnAddResource = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'btnReview
         '
-        Me.btnReview.Location = New System.Drawing.Point(592, 295)
+        Me.btnReview.Location = New System.Drawing.Point(395, 192)
+        Me.btnReview.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnReview.Name = "btnReview"
-        Me.btnReview.Size = New System.Drawing.Size(155, 87)
+        Me.btnReview.Size = New System.Drawing.Size(103, 57)
         Me.btnReview.TabIndex = 28
         Me.btnReview.Text = "Account Review"
         Me.btnReview.UseVisualStyleBackColor = True
         '
         'btnLogout
         '
-        Me.btnLogout.Location = New System.Drawing.Point(63, 295)
+        Me.btnLogout.Location = New System.Drawing.Point(42, 192)
+        Me.btnLogout.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(155, 87)
+        Me.btnLogout.Size = New System.Drawing.Size(103, 57)
         Me.btnLogout.TabIndex = 27
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.UseVisualStyleBackColor = True
@@ -50,32 +52,33 @@ Partial Class WelcomePage
         '
         Me.lblWelcome.AutoSize = True
         Me.lblWelcome.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblWelcome.Location = New System.Drawing.Point(275, 112)
-        Me.lblWelcome.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblWelcome.Location = New System.Drawing.Point(183, 73)
         Me.lblWelcome.Name = "lblWelcome"
-        Me.lblWelcome.Size = New System.Drawing.Size(231, 55)
+        Me.lblWelcome.Size = New System.Drawing.Size(157, 37)
         Me.lblWelcome.TabIndex = 26
         Me.lblWelcome.Text = "Welcome"
         Me.lblWelcome.UseMnemonic = False
         '
-        'btnAddResource
+        'btnSearch
         '
-        Me.btnAddResource.Location = New System.Drawing.Point(320, 295)
-        Me.btnAddResource.Name = "btnAddResource"
-        Me.btnAddResource.Size = New System.Drawing.Size(155, 87)
-        Me.btnAddResource.TabIndex = 29
-        Me.btnAddResource.Text = "Add Resource"
-        Me.btnAddResource.UseVisualStyleBackColor = True
+        Me.btnSearch.Location = New System.Drawing.Point(213, 192)
+        Me.btnSearch.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(103, 57)
+        Me.btnSearch.TabIndex = 29
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = True
         '
         'WelcomePage
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(830, 494)
-        Me.Controls.Add(Me.btnAddResource)
+        Me.ClientSize = New System.Drawing.Size(553, 321)
+        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.btnReview)
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.lblWelcome)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "WelcomePage"
         Me.Text = "WelcomePage"
         Me.ResumeLayout(False)
@@ -86,5 +89,5 @@ Partial Class WelcomePage
     Friend WithEvents btnReview As Button
     Friend WithEvents btnLogout As Button
     Friend WithEvents lblWelcome As Label
-    Friend WithEvents btnAddResource As Button
+    Friend WithEvents btnSearch As Button
 End Class

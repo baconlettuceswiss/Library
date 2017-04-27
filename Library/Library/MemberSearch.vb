@@ -66,4 +66,11 @@
         Me.ResourcesTableAdapter.Fill(Me.LibraryDataSet.Resources)
 
     End Sub
+
+    Private Sub btn_back_Click(sender As Object, e As EventArgs) Handles btn_back.Click
+        Dim WelcomeForm As WelcomePage
+        WelcomeForm = New WelcomePage
+        WelcomeForm.Show()
+        Me.Visible = False
+    End Sub
 End Class

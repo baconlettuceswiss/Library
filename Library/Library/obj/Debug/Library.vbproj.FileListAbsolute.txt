@@ -18,3 +18,16 @@ C:\Users\Justin\Source\Repos\Library\Library\Library\bin\Debug\Library.exe.confi
 C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.exe
 C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.xml
 C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.pdb
+C:\Users\Justin\Source\Repos\Library\Library\Library\bin\Debug\Library.accdb
+C:\Users\Justin\Source\Repos\Library\Library\Library\bin\Debug\Library.exe
+C:\Users\Justin\Source\Repos\Library\Library\Library\bin\Debug\Library.pdb
+C:\Users\Justin\Source\Repos\Library\Library\Library\bin\Debug\Library.xml
+C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.vbprojResolveAssemblyReference.cache
+C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.AddResource.resources
+C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.EmployeeWelcome.resources
+C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.MemberSearch.resources
+C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.Login.resources
+C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.MemberAccount.resources
+C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.Resources.resources
+C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.WelcomePage.resources
+C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.vbproj.GenerateResource.Cache

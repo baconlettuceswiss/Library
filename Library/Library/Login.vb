@@ -54,11 +54,11 @@
                         If Password = txtPW.Text Then
                             'MessageBox.Show("Login successful")
 
-                            memberID = RowData.MemberID
+                            memberID = RowData.EmployeeID
 
-                            Dim WelcomeForm As WelcomePage
-                            WelcomeForm = New WelcomePage
-                            WelcomeForm.Show()
+                            Dim EmployeeWelcomeForm As EmployeeWelcome
+                            EmployeeWelcomeForm = New EmployeeWelcome
+                            EmployeeWelcomeForm.Show()
                             Me.Visible = False
                         Else
                             MessageBox.Show("Login unsuccessful")

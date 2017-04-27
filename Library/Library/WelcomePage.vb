@@ -19,10 +19,10 @@
         Me.Visible = False
     End Sub
 
-    Private Sub btnAddResource_Click(sender As Object, e As EventArgs) Handles btnAddResource.Click
-        Dim AddResourceForm As AddResource
-        AddResourceForm = New AddResource
-        AddResourceForm.Show()
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        Dim MemberSearchForm As MemberSearch
+        MemberSearchForm = New MemberSearch
+        MemberSearchForm.Show()
         Me.Visible = False
     End Sub
 

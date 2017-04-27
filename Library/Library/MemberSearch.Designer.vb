@@ -40,8 +40,9 @@ Partial Class MemberSearch
         Me.ResourcesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ResourcesTableAdapter = New Library.LibraryDataSetTableAdapters.ResourcesTableAdapter()
         Me.TableAdapterManager = New Library.LibraryDataSetTableAdapters.TableAdapterManager()
-        Me.CheckoutBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CheckoutTableAdapter = New Library.LibraryDataSetTableAdapters.CheckoutTableAdapter()
+        Me.CheckoutBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.btn_back = New System.Windows.Forms.Button()
         CType(Me.SearchResults, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ResourcesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,39 +51,35 @@ Partial Class MemberSearch
         '
         'AuthorSearch
         '
-        Me.AuthorSearch.Location = New System.Drawing.Point(765, 137)
-        Me.AuthorSearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.AuthorSearch.Location = New System.Drawing.Point(510, 89)
         Me.AuthorSearch.Name = "AuthorSearch"
-        Me.AuthorSearch.Size = New System.Drawing.Size(112, 35)
+        Me.AuthorSearch.Size = New System.Drawing.Size(75, 23)
         Me.AuthorSearch.TabIndex = 9
         Me.AuthorSearch.Text = "Search"
         Me.AuthorSearch.UseVisualStyleBackColor = True
         '
         'TitleSearch
         '
-        Me.TitleSearch.Location = New System.Drawing.Point(362, 137)
-        Me.TitleSearch.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TitleSearch.Location = New System.Drawing.Point(241, 89)
         Me.TitleSearch.Name = "TitleSearch"
-        Me.TitleSearch.Size = New System.Drawing.Size(112, 35)
+        Me.TitleSearch.Size = New System.Drawing.Size(75, 23)
         Me.TitleSearch.TabIndex = 8
         Me.TitleSearch.Text = "Search"
         Me.TitleSearch.UseVisualStyleBackColor = True
         '
         'AuthorTB
         '
-        Me.AuthorTB.Location = New System.Drawing.Point(559, 137)
-        Me.AuthorTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.AuthorTB.Location = New System.Drawing.Point(373, 89)
         Me.AuthorTB.Name = "AuthorTB"
-        Me.AuthorTB.Size = New System.Drawing.Size(148, 26)
+        Me.AuthorTB.Size = New System.Drawing.Size(100, 20)
         Me.AuthorTB.TabIndex = 7
         Me.AuthorTB.Text = "Author Last Name..."
         '
         'TitleTB
         '
-        Me.TitleTB.Location = New System.Drawing.Point(140, 137)
-        Me.TitleTB.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.TitleTB.Location = New System.Drawing.Point(93, 89)
         Me.TitleTB.Name = "TitleTB"
-        Me.TitleTB.Size = New System.Drawing.Size(148, 26)
+        Me.TitleTB.Size = New System.Drawing.Size(100, 20)
         Me.TitleTB.TabIndex = 6
         Me.TitleTB.Text = "Book Title..."
         '
@@ -92,12 +89,13 @@ Partial Class MemberSearch
         Me.SearchResults.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
         Me.SearchResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SearchResults.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.BookID, Me.CheckoutLength, Me.Title, Me.Author, Me.Genre, Me.ISBN, Me.MoreInfo, Me.Checkout})
-        Me.SearchResults.Location = New System.Drawing.Point(140, 213)
+        Me.SearchResults.Location = New System.Drawing.Point(93, 138)
+        Me.SearchResults.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.SearchResults.Name = "SearchResults"
         Me.SearchResults.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders
         Me.SearchResults.RowTemplate.Height = 28
         Me.SearchResults.ScrollBars = System.Windows.Forms.ScrollBars.None
-        Me.SearchResults.Size = New System.Drawing.Size(737, 350)
+        Me.SearchResults.Size = New System.Drawing.Size(491, 227)
         Me.SearchResults.TabIndex = 10
         Me.SearchResults.Visible = False
         '
@@ -119,39 +117,39 @@ Partial Class MemberSearch
         '
         Me.Title.HeaderText = "Title"
         Me.Title.Name = "Title"
-        Me.Title.Width = 74
+        Me.Title.Width = 52
         '
         'Author
         '
         Me.Author.HeaderText = "Author"
         Me.Author.Name = "Author"
-        Me.Author.Width = 93
+        Me.Author.Width = 63
         '
         'Genre
         '
         Me.Genre.HeaderText = "Genre"
         Me.Genre.Name = "Genre"
-        Me.Genre.Width = 90
+        Me.Genre.Width = 61
         '
         'ISBN
         '
         Me.ISBN.HeaderText = "ISBN"
         Me.ISBN.Name = "ISBN"
-        Me.ISBN.Width = 83
+        Me.ISBN.Width = 57
         '
         'MoreInfo
         '
         Me.MoreInfo.HeaderText = "More Info"
         Me.MoreInfo.Name = "MoreInfo"
         Me.MoreInfo.Text = "More Info"
-        Me.MoreInfo.Width = 83
+        Me.MoreInfo.Width = 58
         '
         'Checkout
         '
         Me.Checkout.HeaderText = "Checkout"
         Me.Checkout.Name = "Checkout"
         Me.Checkout.Text = "Checkout"
-        Me.Checkout.Width = 83
+        Me.Checkout.Width = 59
         '
         'LibraryDataSet
         '
@@ -176,26 +174,36 @@ Partial Class MemberSearch
         Me.TableAdapterManager.ResourcesTableAdapter = Me.ResourcesTableAdapter
         Me.TableAdapterManager.UpdateOrder = Library.LibraryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
+        'CheckoutTableAdapter
+        '
+        Me.CheckoutTableAdapter.ClearBeforeFill = True
+        '
         'CheckoutBindingSource
         '
         Me.CheckoutBindingSource.DataMember = "Checkout"
         Me.CheckoutBindingSource.DataSource = Me.LibraryDataSet
         '
-        'CheckoutTableAdapter
+        'btn_back
         '
-        Me.CheckoutTableAdapter.ClearBeforeFill = True
+        Me.btn_back.Location = New System.Drawing.Point(639, 89)
+        Me.btn_back.Margin = New System.Windows.Forms.Padding(2)
+        Me.btn_back.Name = "btn_back"
+        Me.btn_back.Size = New System.Drawing.Size(65, 36)
+        Me.btn_back.TabIndex = 11
+        Me.btn_back.Text = "Back"
+        Me.btn_back.UseVisualStyleBackColor = True
         '
         'MemberSearch
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1098, 791)
+        Me.ClientSize = New System.Drawing.Size(732, 482)
+        Me.Controls.Add(Me.btn_back)
         Me.Controls.Add(Me.SearchResults)
         Me.Controls.Add(Me.AuthorSearch)
         Me.Controls.Add(Me.TitleSearch)
         Me.Controls.Add(Me.AuthorTB)
         Me.Controls.Add(Me.TitleTB)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "MemberSearch"
         Me.Text = "MemberSearch"
         CType(Me.SearchResults, System.ComponentModel.ISupportInitialize).EndInit()
@@ -226,4 +234,5 @@ Partial Class MemberSearch
     Friend WithEvents TableAdapterManager As LibraryDataSetTableAdapters.TableAdapterManager
     Friend WithEvents CheckoutTableAdapter As LibraryDataSetTableAdapters.CheckoutTableAdapter
     Friend WithEvents CheckoutBindingSource As BindingSource
+    Friend WithEvents btn_back As Button
 End Class
