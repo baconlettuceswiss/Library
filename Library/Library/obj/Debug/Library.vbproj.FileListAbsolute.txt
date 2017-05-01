@@ -31,3 +31,4 @@ C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.MemberAcc
 C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.Resources.resources
 C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.WelcomePage.resources
 C:\Users\Justin\Source\Repos\Library\Library\Library\obj\Debug\Library.vbproj.GenerateResource.Cache
+C:\Users\Brendan\Documents\Workspaces\Repos\Library\Library\Library\obj\Debug\Library.EmployeeWelcome.resources

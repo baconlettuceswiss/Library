@@ -65,7 +65,7 @@
 
                 'add author’s last name to the 2nd column of the DataGridView
                 dgvCell = New DataGridViewTextBoxCell()
-                dgvCell.Value = RowData.AuthorFirstName & RowData.AuthorLastName
+                dgvCell.Value = RowData.AuthorFirstName & " " & RowData.AuthorLastName
                 dgvRow.Cells.Add(dgvCell)
 
                 'add genre to the 3rd column of the DataGridView
