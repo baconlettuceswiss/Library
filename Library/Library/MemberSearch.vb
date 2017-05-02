@@ -73,4 +73,8 @@
         WelcomeForm.Show()
         Me.Visible = False
     End Sub
+
+    Private Sub AuthorSearch_Click(sender As Object, e As EventArgs) Handles AuthorSearch.Click
+
+    End Sub
 End Class

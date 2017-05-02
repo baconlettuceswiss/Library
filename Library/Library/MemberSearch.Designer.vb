@@ -97,7 +97,6 @@ Partial Class MemberSearch
         Me.SearchResults.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.SearchResults.Size = New System.Drawing.Size(491, 227)
         Me.SearchResults.TabIndex = 10
-        Me.SearchResults.Visible = False
         '
         'BookID
         '
