@@ -84,6 +84,13 @@
         txtUsername.Left = (txtUsername.Parent.Width \ 2) - (txtUsername.Width \ 2)
         txtPW.Left = (txtPW.Parent.Width \ 2) - (txtPW.Width \ 2)
     End Sub
+
+    Private Sub btnCreateNew_Click(sender As Object, e As EventArgs) Handles btnCreateNew.Click
+        Dim CreateAccountForm As CreateAccount
+        CreateAccountForm = New CreateAccount
+        CreateAccount.Show()
+        Me.Visible = False
+    End Sub
 End Class
 
 

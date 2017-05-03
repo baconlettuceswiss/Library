@@ -48,8 +48,8 @@ Partial Class AddResource
         Me.lblCheckoutPeriod = New System.Windows.Forms.Label()
         Me.comboCheckoutPeriod = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.comboSeries = New System.Windows.Forms.ComboBox()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.txtSeries = New System.Windows.Forms.TextBox()
         CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CheckoutBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ResourcesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,7 +69,7 @@ Partial Class AddResource
         'btnAddResource
         '
         Me.btnAddResource.Location = New System.Drawing.Point(631, 273)
-        Me.btnAddResource.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAddResource.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAddResource.Name = "btnAddResource"
         Me.btnAddResource.Size = New System.Drawing.Size(105, 62)
         Me.btnAddResource.TabIndex = 30
@@ -80,7 +80,7 @@ Partial Class AddResource
         '
         Me.comboSubject.FormattingEnabled = True
         Me.comboSubject.Location = New System.Drawing.Point(475, 165)
-        Me.comboSubject.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.comboSubject.Margin = New System.Windows.Forms.Padding(2)
         Me.comboSubject.Name = "comboSubject"
         Me.comboSubject.Size = New System.Drawing.Size(106, 21)
         Me.comboSubject.TabIndex = 0
@@ -88,7 +88,7 @@ Partial Class AddResource
         'txtTitle
         '
         Me.txtTitle.Location = New System.Drawing.Point(163, 120)
-        Me.txtTitle.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtTitle.Margin = New System.Windows.Forms.Padding(2)
         Me.txtTitle.Name = "txtTitle"
         Me.txtTitle.Size = New System.Drawing.Size(169, 20)
         Me.txtTitle.TabIndex = 31
@@ -96,7 +96,7 @@ Partial Class AddResource
         'txtAuthorFirstName
         '
         Me.txtAuthorFirstName.Location = New System.Drawing.Point(163, 166)
-        Me.txtAuthorFirstName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtAuthorFirstName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtAuthorFirstName.Name = "txtAuthorFirstName"
         Me.txtAuthorFirstName.Size = New System.Drawing.Size(169, 20)
         Me.txtAuthorFirstName.TabIndex = 32
@@ -104,7 +104,7 @@ Partial Class AddResource
         'txtAuthorLastName
         '
         Me.txtAuthorLastName.Location = New System.Drawing.Point(163, 216)
-        Me.txtAuthorLastName.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtAuthorLastName.Margin = New System.Windows.Forms.Padding(2)
         Me.txtAuthorLastName.Name = "txtAuthorLastName"
         Me.txtAuthorLastName.Size = New System.Drawing.Size(169, 20)
         Me.txtAuthorLastName.TabIndex = 33
@@ -112,7 +112,7 @@ Partial Class AddResource
         'txtISBN
         '
         Me.txtISBN.Location = New System.Drawing.Point(163, 265)
-        Me.txtISBN.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtISBN.Margin = New System.Windows.Forms.Padding(2)
         Me.txtISBN.Name = "txtISBN"
         Me.txtISBN.Size = New System.Drawing.Size(169, 20)
         Me.txtISBN.TabIndex = 34
@@ -190,7 +190,7 @@ Partial Class AddResource
         'txtBookInfo
         '
         Me.txtBookInfo.Location = New System.Drawing.Point(163, 318)
-        Me.txtBookInfo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtBookInfo.Margin = New System.Windows.Forms.Padding(2)
         Me.txtBookInfo.Name = "txtBookInfo"
         Me.txtBookInfo.Size = New System.Drawing.Size(169, 20)
         Me.txtBookInfo.TabIndex = 46
@@ -199,7 +199,7 @@ Partial Class AddResource
         '
         Me.comboPublicationDate.FormattingEnabled = True
         Me.comboPublicationDate.Location = New System.Drawing.Point(475, 118)
-        Me.comboPublicationDate.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.comboPublicationDate.Margin = New System.Windows.Forms.Padding(2)
         Me.comboPublicationDate.Name = "comboPublicationDate"
         Me.comboPublicationDate.Size = New System.Drawing.Size(106, 21)
         Me.comboPublicationDate.TabIndex = 1
@@ -250,7 +250,7 @@ Partial Class AddResource
         '
         Me.comboCheckoutPeriod.FormattingEnabled = True
         Me.comboCheckoutPeriod.Location = New System.Drawing.Point(475, 214)
-        Me.comboCheckoutPeriod.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.comboCheckoutPeriod.Margin = New System.Windows.Forms.Padding(2)
         Me.comboCheckoutPeriod.Name = "comboCheckoutPeriod"
         Me.comboCheckoutPeriod.Size = New System.Drawing.Size(106, 21)
         Me.comboCheckoutPeriod.TabIndex = 48
@@ -265,15 +265,6 @@ Partial Class AddResource
         Me.Label1.TabIndex = 49
         Me.Label1.Text = "Series"
         '
-        'comboSeries
-        '
-        Me.comboSeries.FormattingEnabled = True
-        Me.comboSeries.Location = New System.Drawing.Point(475, 266)
-        Me.comboSeries.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.comboSeries.Name = "comboSeries"
-        Me.comboSeries.Size = New System.Drawing.Size(106, 21)
-        Me.comboSeries.TabIndex = 50
-        '
         'btnBack
         '
         Me.btnBack.Location = New System.Drawing.Point(631, 174)
@@ -284,13 +275,20 @@ Partial Class AddResource
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
         '
+        'txtSeries
+        '
+        Me.txtSeries.Location = New System.Drawing.Point(475, 265)
+        Me.txtSeries.Name = "txtSeries"
+        Me.txtSeries.Size = New System.Drawing.Size(106, 20)
+        Me.txtSeries.TabIndex = 52
+        '
         'AddResource
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(759, 409)
+        Me.Controls.Add(Me.txtSeries)
         Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.comboSeries)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.comboCheckoutPeriod)
         Me.Controls.Add(Me.lblCheckoutPeriod)
@@ -310,7 +308,7 @@ Partial Class AddResource
         Me.Controls.Add(Me.lblPageTitle)
         Me.Controls.Add(Me.comboPublicationDate)
         Me.Controls.Add(Me.comboSubject)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "AddResource"
         Me.Text = "AddResource"
         CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
@@ -346,6 +344,6 @@ Partial Class AddResource
     Friend WithEvents lblCheckoutPeriod As Label
     Friend WithEvents comboCheckoutPeriod As ComboBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents comboSeries As ComboBox
     Friend WithEvents btnBack As Button
+    Friend WithEvents txtSeries As TextBox
 End Class

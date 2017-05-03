@@ -35,6 +35,7 @@ Partial Class Login
         Me.TableAdapterManager = New Library.LibraryDataSetTableAdapters.TableAdapterManager()
         Me.EmployeesTableAdapter = New Library.LibraryDataSetTableAdapters.EmployeesTableAdapter()
         Me.EmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.btnCreateNew = New System.Windows.Forms.Button()
         PasswordLabel = New System.Windows.Forms.Label()
         EmailLabel = New System.Windows.Forms.Label()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,58 +46,52 @@ Partial Class Login
         'PasswordLabel
         '
         PasswordLabel.AutoSize = True
-        PasswordLabel.Location = New System.Drawing.Point(219, 210)
-        PasswordLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        PasswordLabel.Location = New System.Drawing.Point(146, 136)
         PasswordLabel.Name = "PasswordLabel"
-        PasswordLabel.Size = New System.Drawing.Size(82, 20)
+        PasswordLabel.Size = New System.Drawing.Size(56, 13)
         PasswordLabel.TabIndex = 24
         PasswordLabel.Text = "Password:"
         '
         'EmailLabel
         '
         EmailLabel.AutoSize = True
-        EmailLabel.Location = New System.Drawing.Point(251, 175)
-        EmailLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        EmailLabel.Location = New System.Drawing.Point(167, 114)
         EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New System.Drawing.Size(52, 20)
+        EmailLabel.Size = New System.Drawing.Size(35, 13)
         EmailLabel.TabIndex = 23
         EmailLabel.Text = "Email:"
         '
         'BtnLogin
         '
-        Me.BtnLogin.Location = New System.Drawing.Point(337, 280)
-        Me.BtnLogin.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.BtnLogin.Location = New System.Drawing.Point(125, 177)
         Me.BtnLogin.Name = "BtnLogin"
-        Me.BtnLogin.Size = New System.Drawing.Size(112, 35)
+        Me.BtnLogin.Size = New System.Drawing.Size(118, 23)
         Me.BtnLogin.TabIndex = 25
         Me.BtnLogin.Text = "Login"
         Me.BtnLogin.UseVisualStyleBackColor = True
         '
         'txtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(321, 170)
-        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtUsername.Location = New System.Drawing.Point(214, 110)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(148, 26)
+        Me.txtUsername.Size = New System.Drawing.Size(100, 20)
         Me.txtUsername.TabIndex = 26
         '
         'txtPW
         '
-        Me.txtPW.Location = New System.Drawing.Point(321, 210)
-        Me.txtPW.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.txtPW.Location = New System.Drawing.Point(214, 136)
         Me.txtPW.Name = "txtPW"
         Me.txtPW.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPW.Size = New System.Drawing.Size(148, 26)
+        Me.txtPW.Size = New System.Drawing.Size(100, 20)
         Me.txtPW.TabIndex = 27
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(71, 70)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(47, 45)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(635, 55)
+        Me.Label1.Size = New System.Drawing.Size(433, 37)
         Me.Label1.TabIndex = 28
         Me.Label1.Text = "Welcome To The E-Library!"
         '
@@ -132,17 +127,28 @@ Partial Class Login
         Me.EmployeesBindingSource.DataMember = "Employees"
         Me.EmployeesBindingSource.DataSource = Me.LibraryDataSet
         '
+        'btnCreateNew
+        '
+        Me.btnCreateNew.Location = New System.Drawing.Point(276, 177)
+        Me.btnCreateNew.Name = "btnCreateNew"
+        Me.btnCreateNew.Size = New System.Drawing.Size(126, 23)
+        Me.btnCreateNew.TabIndex = 29
+        Me.btnCreateNew.Text = "Create Account"
+        Me.btnCreateNew.UseVisualStyleBackColor = True
+        '
         'Login
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(777, 385)
+        Me.ClientSize = New System.Drawing.Size(518, 250)
+        Me.Controls.Add(Me.btnCreateNew)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtPW)
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(EmailLabel)
         Me.Controls.Add(PasswordLabel)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Login"
         Me.Text = "Form1"
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -163,4 +169,5 @@ Partial Class Login
     Friend WithEvents TableAdapterManager As LibraryDataSetTableAdapters.TableAdapterManager
     Friend WithEvents EmployeesTableAdapter As LibraryDataSetTableAdapters.EmployeesTableAdapter
     Friend WithEvents EmployeesBindingSource As BindingSource
+    Friend WithEvents btnCreateNew As Button
 End Class

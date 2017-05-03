@@ -59,7 +59,7 @@
             ISBN = txtISBN.Text
             CheckoutPeriod = comboCheckoutPeriod.Text
             PublicationDate = comboPublicationDate.Text
-            Series = comboSeries.Text
+            Series = txtSeries.Text
             Subject = comboSubject.Text
             BookInfo = txtBookInfo.Text
 
@@ -86,7 +86,7 @@
         txtISBN.Clear()
         comboCheckoutPeriod.Text = String.Empty
         comboPublicationDate.Text = String.Empty
-        comboSeries.Text = String.Empty
+        txtSeries.Text = String.Empty
         comboSubject.Text = String.Empty
         txtBookInfo.Clear()
     End Sub
