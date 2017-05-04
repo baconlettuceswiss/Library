@@ -46,10 +46,13 @@ Partial Class MemberSearch
         Me.CheckoutTableAdapter = New Library.LibraryDataSetTableAdapters.CheckoutTableAdapter()
         Me.CheckoutBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.btnCheckout = New System.Windows.Forms.Button()
+        Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersTableAdapter = New Library.LibraryDataSetTableAdapters.MembersTableAdapter()
         CType(Me.SearchResults, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ResourcesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.CheckoutBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnAuthorSearch
@@ -215,12 +218,21 @@ Partial Class MemberSearch
         '
         'btnCheckout
         '
-        Me.btnCheckout.Location = New System.Drawing.Point(474, 412)
+        Me.btnCheckout.Location = New System.Drawing.Point(510, 414)
         Me.btnCheckout.Name = "btnCheckout"
         Me.btnCheckout.Size = New System.Drawing.Size(147, 28)
         Me.btnCheckout.TabIndex = 12
         Me.btnCheckout.Text = "Checkout"
         Me.btnCheckout.UseVisualStyleBackColor = True
+        '
+        'MembersBindingSource
+        '
+        Me.MembersBindingSource.DataMember = "Members"
+        Me.MembersBindingSource.DataSource = Me.LibraryDataSet
+        '
+        'MembersTableAdapter
+        '
+        Me.MembersTableAdapter.ClearBeforeFill = True
         '
         'MemberSearch
         '
@@ -240,6 +252,7 @@ Partial Class MemberSearch
         CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ResourcesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.CheckoutBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -268,4 +281,6 @@ Partial Class MemberSearch
     Friend WithEvents MoreInfo As DataGridViewButtonColumn
     Friend WithEvents Checkout As DataGridViewButtonColumn
     Friend WithEvents btnCheckout As Button
+    Friend WithEvents MembersBindingSource As BindingSource
+    Friend WithEvents MembersTableAdapter As LibraryDataSetTableAdapters.MembersTableAdapter
 End Class

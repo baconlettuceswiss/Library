@@ -43,22 +43,31 @@
             Address = txtAddress.Text
             City = txtCity.Text
             State = txtState.Text
-            Zip = txtZipcode.Text
+
             Email = txtEmail.Text
             Password = txtPassword.Text
+            Dim isNumber As Boolean = Int32.TryParse(txtZipcode.Text, Zip)
+            If isNumber = True Then
+                Dim LRandomNumber As Integer
+                LRandomNumber = Int((100000 - 100000 + 1) * Rnd() + 100000)
+
+                MemberID = "PLIV" & LRandomNumber.ToString
+
+                MembersTableAdapter.InsertNewMember(MemberID, FirstName, LastName, Address, City, State, Zip, Email, Password)
+
+                MessageBox.Show("Successfully Created Account")
+
+                emptyBoxes()
+            Else
+                MessageBox.Show("Please enter a valid zipcode")
+                'txtZipcode.Text 
+
+            End If
+
 
 
             'random number between 200 and 300
-            Dim LRandomNumber As Integer
-            LRandomNumber = Int((100000 - 100000 + 1) * Rnd() + 100000)
 
-            MemberID = "PLIV" & LRandomNumber.ToString
-
-            MembersTableAdapter.InsertNewMember(MemberID, FirstName, LastName, Address, City, State, Zip, Email, Password)
-
-            MessageBox.Show("Successfully Created Account")
-
-            emptyBoxes()
         End If
 
 
@@ -83,7 +92,7 @@
         Me.Visible = False
     End Sub
 
-    Private Sub MembersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) 
+    Private Sub MembersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
         Me.MembersBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.LibraryDataSet)

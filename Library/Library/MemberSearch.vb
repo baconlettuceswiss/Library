@@ -7,6 +7,7 @@
     Dim ResourceStatus As String
     Dim DueDate As Date
     Dim CheckoutDate As Date
+    Dim CurrentDate As Date = Date.Today.Date
 
     Dim MemberID As String = Login.memberID
     Dim RowData As Object
@@ -29,7 +30,23 @@
         End If
 
         If grid.Columns(e.ColumnIndex).Name = "Checkout" Then
-            MessageBox.Show(SearchResults.Rows(e.RowIndex).Cells(2).Value)
+
+            If SearchResults.RowCount = 0 Then
+                MessageBox.Show("Please select a book")
+            Else
+                If SearchResults.SelectedRows(9).SetValues = "Available" Then
+                    resourceID = SearchResults.SelectedRows(0).SetValues
+                    RowData = MembersTableAdapter.GetDataByEmail(Login.Email.text)(0)
+                    MemberID = RowData.MemberID
+                    CheckoutDate = CurrentDate.Date
+                    CheckoutTableAdapter.InsertCheckOut(resourceID, MemberID, CheckoutDate)
+
+
+
+                End If
+
+            End If
+
         End If
 
         'SearchResults.Rows.Clear()
@@ -44,6 +61,8 @@
     End Sub
 
     Private Sub MemberSearch_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'LibraryDataSet.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter.Fill(Me.LibraryDataSet.Members)
         'TODO: This line of code loads data into the 'LibraryDataSet.Checkout' table. You can move, or remove it, as needed.
         Me.CheckoutTableAdapter.Fill(Me.LibraryDataSet.Checkout)
         'TODO: This line of code loads data into the 'LibraryDataSet.Resources' table. You can move, or remove it, as needed.
@@ -221,6 +240,6 @@
     End Sub
 
     Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
-
+        If SearchResults.
     End Sub
 End Class

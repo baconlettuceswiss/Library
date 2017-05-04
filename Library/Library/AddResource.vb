@@ -4,7 +4,7 @@
     Dim BookTitle As String
     Dim AuthorFirstName As String
     Dim AuthorLastName As String
-    Dim ISBN As String
+    Dim ISBN As Integer
     Dim CheckoutPeriod As Integer
     Dim PublicationDate As Integer
     Dim Series As String
