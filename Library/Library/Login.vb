@@ -78,12 +78,12 @@
 
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label1.Left = (Label1.Parent.Width \ 2) - (Label1.Width \ 2)
-        BtnLogin.Left = (BtnLogin.Parent.Width \ 2) - (BtnLogin.Width \ 2)
-        txtUsername.Left = (txtUsername.Parent.Width \ 2) - (txtUsername.Width \ 2)
-        txtPW.Left = (txtPW.Parent.Width \ 2) - (txtPW.Width \ 2)
-    End Sub
+    'Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    'Label1.Left = (Label1.Parent.Width \ 2) - (Label1.Width \ 2)
+    'BtnLogin.Left = (BtnLogin.Parent.Width \ 2) - (BtnLogin.Width \ 2)
+    'txtUsername.Left = (txtUsername.Parent.Width \ 2) - (txtUsername.Width \ 2)
+    'txtPW.Left = (txtPW.Parent.Width \ 2) - (txtPW.Width \ 2)
+    'End Sub
 
     Private Sub btnCreateNew_Click(sender As Object, e As EventArgs) Handles btnCreateNew.Click
         Dim CreateAccountForm As CreateAccount

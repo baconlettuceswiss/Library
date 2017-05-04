@@ -15,16 +15,17 @@
 
     Private Sub CheckoutBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs)
         Me.Validate()
-        Me.CheckoutBindingSource.EndEdit()
+        Me.MembersBindingSource.EndEdit()
         Me.TableAdapterManager.UpdateAll(Me.LibraryDataSet)
 
     End Sub
 
     Private Sub AddMember_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'LibraryDataSet.Members' table. You can move, or remove it, as needed.
+        Me.MembersTableAdapter.Fill(Me.LibraryDataSet.Members)
         'TODO: This line of code loads data into the 'LibraryDataSet.Resources' table. You can move, or remove it, as needed.
         Me.MembersTableAdapter.Fill(Me.LibraryDataSet.Members)
         'TODO: This line of code loads data into the 'LibraryDataSet.Checkout' table. You can move, or remove it, as needed.
-        Me.CheckoutTableAdapter.Fill(Me.LibraryDataSet.Checkout)
 
 
 
@@ -51,9 +52,9 @@
             Dim LRandomNumber As Integer
             LRandomNumber = Int((100000 - 100000 + 1) * Rnd() + 100000)
 
-            MemberID = "b" & LRandomNumber.ToString
+            MemberID = "PLIV" & LRandomNumber.ToString
 
-            MembersTableAdapter.InsertNewResource(MemberID, FirstName, LastName, Address, City, State, Zip, Email, Password)
+            MembersTableAdapter.InsertNewMember(MemberID, FirstName, LastName, Address, City, State, Zip, Email, Password)
 
             MessageBox.Show("Successfully Created Account")
 
@@ -80,5 +81,12 @@
         LoginForm = New Login
         LoginForm.Show()
         Me.Visible = False
+    End Sub
+
+    Private Sub MembersBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) 
+        Me.Validate()
+        Me.MembersBindingSource.EndEdit()
+        Me.TableAdapterManager.UpdateAll(Me.LibraryDataSet)
+
     End Sub
 End Class

@@ -29,13 +29,13 @@ Partial Class Login
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.txtPW = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnCreateNew = New System.Windows.Forms.Button()
         Me.MembersTableAdapter = New Library.LibraryDataSetTableAdapters.MembersTableAdapter()
         Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.LibraryDataSet = New Library.LibraryDataSet()
         Me.TableAdapterManager = New Library.LibraryDataSetTableAdapters.TableAdapterManager()
         Me.EmployeesTableAdapter = New Library.LibraryDataSetTableAdapters.EmployeesTableAdapter()
         Me.EmployeesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.btnCreateNew = New System.Windows.Forms.Button()
         PasswordLabel = New System.Windows.Forms.Label()
         EmailLabel = New System.Windows.Forms.Label()
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -63,7 +63,7 @@ Partial Class Login
         '
         'BtnLogin
         '
-        Me.BtnLogin.Location = New System.Drawing.Point(125, 177)
+        Me.BtnLogin.Location = New System.Drawing.Point(128, 175)
         Me.BtnLogin.Name = "BtnLogin"
         Me.BtnLogin.Size = New System.Drawing.Size(118, 23)
         Me.BtnLogin.TabIndex = 25
@@ -94,6 +94,15 @@ Partial Class Login
         Me.Label1.Size = New System.Drawing.Size(433, 37)
         Me.Label1.TabIndex = 28
         Me.Label1.Text = "Welcome To The E-Library!"
+        '
+        'btnCreateNew
+        '
+        Me.btnCreateNew.Location = New System.Drawing.Point(279, 175)
+        Me.btnCreateNew.Name = "btnCreateNew"
+        Me.btnCreateNew.Size = New System.Drawing.Size(126, 23)
+        Me.btnCreateNew.TabIndex = 29
+        Me.btnCreateNew.Text = "Create Account"
+        Me.btnCreateNew.UseVisualStyleBackColor = True
         '
         'MembersTableAdapter
         '
@@ -127,15 +136,6 @@ Partial Class Login
         Me.EmployeesBindingSource.DataMember = "Employees"
         Me.EmployeesBindingSource.DataSource = Me.LibraryDataSet
         '
-        'btnCreateNew
-        '
-        Me.btnCreateNew.Location = New System.Drawing.Point(276, 177)
-        Me.btnCreateNew.Name = "btnCreateNew"
-        Me.btnCreateNew.Size = New System.Drawing.Size(126, 23)
-        Me.btnCreateNew.TabIndex = 29
-        Me.btnCreateNew.Text = "Create Account"
-        Me.btnCreateNew.UseVisualStyleBackColor = True
-        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -148,7 +148,7 @@ Partial Class Login
         Me.Controls.Add(Me.BtnLogin)
         Me.Controls.Add(EmailLabel)
         Me.Controls.Add(PasswordLabel)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Login"
         Me.Text = "Form1"
         CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

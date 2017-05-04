@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class CreateAccount
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class CreateAccount
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblpass = New System.Windows.Forms.Label()
@@ -41,6 +42,12 @@ Partial Class CreateAccount
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtState = New System.Windows.Forms.TextBox()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.LibraryDataSet = New Library.LibraryDataSet()
+        Me.MembersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.MembersTableAdapter = New Library.LibraryDataSetTableAdapters.MembersTableAdapter()
+        Me.TableAdapterManager = New Library.LibraryDataSetTableAdapters.TableAdapterManager()
+        CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -226,6 +233,29 @@ Partial Class CreateAccount
         Me.btnBack.Text = "Back"
         Me.btnBack.UseVisualStyleBackColor = True
         '
+        'LibraryDataSet
+        '
+        Me.LibraryDataSet.DataSetName = "LibraryDataSet"
+        Me.LibraryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'MembersBindingSource
+        '
+        Me.MembersBindingSource.DataMember = "Members"
+        Me.MembersBindingSource.DataSource = Me.LibraryDataSet
+        '
+        'MembersTableAdapter
+        '
+        Me.MembersTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.CheckoutTableAdapter = Nothing
+        Me.TableAdapterManager.EmployeesTableAdapter = Nothing
+        Me.TableAdapterManager.MembersTableAdapter = Me.MembersTableAdapter
+        Me.TableAdapterManager.ResourcesTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = Library.LibraryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'CreateAccount
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 24.0!)
@@ -254,6 +284,8 @@ Partial Class CreateAccount
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "CreateAccount"
         Me.Text = "CreateAccount"
+        CType(Me.LibraryDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MembersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -278,4 +310,8 @@ Partial Class CreateAccount
     Friend WithEvents Label3 As Label
     Friend WithEvents txtState As TextBox
     Friend WithEvents btnBack As Button
+    Friend WithEvents LibraryDataSet As LibraryDataSet
+    Friend WithEvents MembersBindingSource As BindingSource
+    Friend WithEvents MembersTableAdapter As LibraryDataSetTableAdapters.MembersTableAdapter
+    Friend WithEvents TableAdapterManager As LibraryDataSetTableAdapters.TableAdapterManager
 End Class

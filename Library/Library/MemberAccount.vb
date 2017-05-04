@@ -170,9 +170,9 @@
     End Sub
 
     Private Sub btn_back_Click(sender As Object, e As EventArgs) Handles btn_back.Click
-        Dim EmployeeWelcomeForm As EmployeeWelcome
-        EmployeeWelcomeForm = New EmployeeWelcome
-        EmployeeWelcomeForm.Show()
+        Dim WelcomePageForm As WelcomePage
+        WelcomePageForm = New WelcomePage
+        WelcomePageForm.Show()
         Me.Visible = False
     End Sub
 

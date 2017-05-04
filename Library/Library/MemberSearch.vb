@@ -219,4 +219,8 @@
             MessageBox.Show("No items found using your search parameters")
         End If
     End Sub
+
+    Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
+
+    End Sub
 End Class
